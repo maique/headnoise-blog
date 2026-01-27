@@ -1,0 +1,46 @@
+---
+title: 'Screenie'
+description: "testing the screens"
+date: 2026-01-26
+tags: ['screenie', 'drafts']
+image: '/tiny.png'
+alt: 'iPhone mockup with Tiny Theme for Drafts.'
+credit: Tiny Theme
+---
+
+![iPhone mockup with Tiny Theme for Drafts](/tiny.png)
+
+
+## Markdown syntax
+
+This also uses [Image HTML Transform ](https://www.11ty.dev/docs/plugins/image/#html-transform).
+The markdown sytnax for images creates the `<img>` element the plugin is looking for, and then transforms it to the `<picture>` element (if more than one format is set).
+
+In `src/_config/plugins/markdown.js` I customized the Markdown rendering for images slightly. What normally would become a `title` attribute is used to create the caption (`<figcaption>` within a `<figure>` element). Note that I set a fixed `widths` value instead of `auto` as the default.
+
+```markdown
+![alt text](/path/to/image 'caption text')
+![Close-up...](/assets/images/gallery/asturias-4.jpg) 'I used a portrait lens for this one'
+```
+
+![Close-up with unfocused background of a vibrant large blue butterfly gracefully perched on a delicate flower amidst lush green gras](/assets/images/gallery/asturias-4.jpg 'I used a portrait lens for this one')
+
+We can also add custom attributes here ([Kudos to Aleksandr](https://www.aleksandrhovhannisyan.com/blog/eleventy-image-transform/)), to overwrite the default `widths`, have the image eagerly loaded, or add a `class` attribute, etc.
+
+```markdown
+![alt text](/path/to/image){attrs}
+![Close-up...](/assets/images/gallery/asturias-2.jpg){loading="eager" decoding="sync" eleventy:widths="400" sizes="100vw" class="grayscale"}
+```
+
+![Close-up of a delicate white flower with a yellow center, surrounded by green leaves](/assets/images/gallery/asturias-2.jpg){loading="eager" decoding="sync" eleventy:widths="400" sizes="100vw" class="grayscale"}
+
+As the Markdown syntax is based on the HTML Transform, we must also add a custom `sizes` attribute to the image if we want to eager-load the image.
+
+
+More:
+- https://www.11ty.dev/docs/plugins/image/
+- https://www.youtube.com/watch?v=e0OHgC677ec
+- https://www.aleksandrhovhannisyan.com/blog/eleventy-image-transform/
+- https://coryd.dev/posts/2024/setting-up-image-transforms-in-eleventy
+- https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/sizes
+- https://ericportis.com/posts/2023/auto-sizes-pretty-much-requires-width-and-height/
