@@ -32,7 +32,6 @@ jobs:
         run: npm run build
         env:
           URL: https://${{ github.repository_owner }}.github.io/headnoise-blog
-          ELEVENTY_PATH_PREFIX: /headnoise-blog/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
