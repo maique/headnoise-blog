@@ -1,24 +1,24 @@
 export const url = process.env.URL || 'http://localhost:8080';
 // Extract domain from `url`
 export const domain = new URL(url).hostname;
-export const siteName = 'My Blog'; // TODO: Change this to your blog name
-export const siteDescription = 'A personal blog'; // TODO: Change this to your blog description
+export const siteName = '> headnoise-blog'; // TODO: Change this to your blog name
+export const siteDescription = 'A blog'; // TODO: Change this to your blog description
 export const siteType = 'Person'; // schema
 export const locale = 'en_EN';
 export const lang = 'en';
 export const skipContent = 'Skip to content';
 export const author = {
-  name: 'Lene Saile', // i.e. Lene Saile - page / blog author's name. Must be set.
+  name: 'hn', // i.e. Lene Saile - page / blog author's name. Must be set.
   avatar: '/icon-512x512.png', // path to the author's avatar. In this case just using a favicon.
-  email: 'hola@lenesaile.com', // i.e. hola@lenesaile.com - email of the author
-  website: 'https://www.lenesaile.com', // i.e. https.://www.lenesaile.com - the personal site of the author
+  email: 'hn@headnoise.org', // i.e. hola@lenesaile.com - email of the author
+  website: 'https://headnoise.org', // i.e. https.://www.lenesaile.com - the personal site of the author
   fediverse: '@lene@front-end.social' // used for highlighting journalism on the fediverse. Can be Mastodon, Flipboard, Threads, WordPress (with the ActivityPub plugin installed), PeerTube, Pixelfed, etc. https://blog.joinmastodon.org/2024/07/highlighting-journalism-on-mastodon/
 };
 export const creator = {
   name: 'Lene Saile', // i.e. Lene Saile - creator's (developer) name.
   email: 'hola@lenesaile.com',
   website: 'https://www.lenesaile.com',
-  social: 'https://front-end.social/@lene'
+  social: 'https://social.lol/@headnoise'
 };
 export const pathToSvgLogo = 'src/assets/svg/misc/logo.svg'; // used for favicon generation
 export const themeColor = '#dd4462'; // used in manifest, for example primary color value
