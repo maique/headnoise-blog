@@ -116,8 +116,9 @@ export default async function (eleventyConfig) {
     eleventyConfig.ignores.add('src/common/pa11y.njk');
   }
 
-  // --------------------- Passthrough for .nojekyll (GitHub Pages)
+  // --------------------- Passthrough for GitHub Pages
   eleventyConfig.addPassthroughCopy({'.nojekyll': '.nojekyll'});
+  eleventyConfig.addPassthroughCopy({'CNAME': 'CNAME'});
 
   // --------------------- general config
   return {
