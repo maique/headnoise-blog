@@ -119,6 +119,7 @@ export default async function (eleventyConfig) {
   // --------------------- Passthrough for GitHub Pages
   eleventyConfig.addPassthroughCopy({'.nojekyll': '.nojekyll'});
   eleventyConfig.addPassthroughCopy({'CNAME': 'CNAME'});
+  eleventyConfig.addPassthroughCopy({'.well-known': '.well-known'});
 
   // --------------------- general config
   return {
