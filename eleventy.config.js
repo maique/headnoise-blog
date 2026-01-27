@@ -122,7 +122,6 @@ export default async function (eleventyConfig) {
   // --------------------- general config
   return {
     markdownTemplateEngine: 'njk',
-    pathPrefix: '/headnoise-blog/',
 
     dir: {
       output: 'dist',
