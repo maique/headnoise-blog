@@ -116,9 +116,13 @@ export default async function (eleventyConfig) {
     eleventyConfig.ignores.add('src/common/pa11y.njk');
   }
 
+  // --------------------- Passthrough for .nojekyll (GitHub Pages)
+  eleventyConfig.addPassthroughCopy({'.nojekyll': '.nojekyll'});
+
   // --------------------- general config
   return {
     markdownTemplateEngine: 'njk',
+    pathPrefix: process.env.ELEVENTY_PATH_PREFIX || '/',
 
     dir: {
       output: 'dist',

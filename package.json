@@ -26,7 +26,7 @@
   "keywords": [],
   "repository": {
     "type": "git",
-    "url": "https://github.com/madrilene/eleventy-excellent.git"
+    "url": "https://github.com/maique/headnoise-blog.git"
   },
   "dependencies": {
     "@11ty/eleventy": "^3.1.2",
