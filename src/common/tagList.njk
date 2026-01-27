@@ -23,7 +23,7 @@ eleventyComputed:
   {% for tag in collections.tagList %}
     <li>
       <a
-        href="/tags/{{ tag | slugify }}/"
+        href="{{ '/tags/' + (tag | slugify) + '/' | url }}"
         class="button"
         {{
           helpers.getLinkActiveState('/tags/' + tag | slugify + '/',
