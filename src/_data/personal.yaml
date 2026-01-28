@@ -6,5 +6,5 @@ address: |-
 platforms:
   # TODO: Add your social links
   github: 'https://github.com/maique'
-  # mastodon: 'https://mastodon.social/@you'
-  # bluesky: 'https://bsky.app/profile/you'
+  mastodon: 'https://social.lo/@maique'
+  bluesky: 'https://bsky.app/profile/maique.eu'
