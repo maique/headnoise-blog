@@ -57,7 +57,7 @@
 }
 
 /* Variants */
-.button[data-button-variant='tertiary'] {
+.button[data-button-variant='primary'] {
   --button-bg: var(--color-primary);
   --button-color: var(--color-light);
   --button-color: color-mix(in oklab, var(--color-primary) 5%, var(--color-light));
@@ -69,7 +69,7 @@
   --button-color: color-mix(in oklab, var(--color-secondary) 5%, var(--color-light));
 }
 
-.button[data-button-variant='primary'] {
+.button[data-button-variant='tertiary'] {
   --button-bg: var(--color-tertiary);
   --button-color: var(--color-dark);
   --button-color: color-mix(in oklab, var(--color-tertiary) 10%, var(--color-dark));
